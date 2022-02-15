@@ -1,3 +1,8 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Hw2 {
 //    Write a Java program to copy one array list into another
 //
@@ -10,21 +15,30 @@ public class Hw2 {
 //    Write a Java program to replace the second element of an ArrayList with the specified element.
 //
 //    Write a Java program to trim the capacity of an array list the current list size
-//
-//    HUNGRY FOR MORE
-//
-//    Write a Java program to test a hash set is empty or not.
-//
-//    Write a Java program to get the number of elements in a hash set
-//
-//    Write a Java program to iterate through all elements in a hash list.
-//
-//    Write a Java program to convert a hash set to an array.
-//
-//    Write a Java program to compare two sets and retain elements that are the same on both sets.
+
 
 
     public static void main(String[] args) {
+        List<String> myVowels = new ArrayList<>();
+//        adding vowels to my list of vowels
+        myVowels.add("a");
+        myVowels.add("e");
+        myVowels.add("i");
+        myVowels.add("o");
+        myVowels.add("u");
+        System.out.println("myVowels");
+
+//        creating consonant list and adding elements
+        List<String> MyConsonants = new ArrayList<>();
+        MyConsonants.add("b");
+        MyConsonants.add("c");
+        MyConsonants.add("d");
+        MyConsonants.add("f");
+        MyConsonants.add("g");
+
+//        using Collections.copy to copy list of myVowels inside list of MyConsonants
+        Collections.copy(MyConsonants, myVowels);
+        System.out.println("MyConsonants");
 
     }
 }
